@@ -30,6 +30,7 @@ resource "kubernetes_stateful_set" "rabbitmq" {
         automount_service_account_token = true
 
         security_context {
+          run_as_user  = var.user_id
           run_as_group = var.group_id
           fs_group     = var.group_id
         }
@@ -65,6 +66,10 @@ resource "kubernetes_stateful_set" "rabbitmq" {
             "${var.user_id}:${var.group_id}",
             "/var/lib/rabbitmq"
           ]
+          
+          security_context {
+            run_as_user = 0
+          }
 
           volume_mount {
             name       = "rabbitmq-mnesia"
