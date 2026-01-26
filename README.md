@@ -92,4 +92,4 @@ The module is being distributed under [MIT Licence](LICENCE.txt). Please make su
 to its terms and conditions
 
 ## <a name="author"></a> Author Information
-Vladimir Tiukhtin <vladimir.tiukhtin@hippolab.ru><br/>London
+Vladimir Tiukhtin <vladimir.tiukhtin@hippolab.uk><br/>London
