@@ -14,6 +14,7 @@ terraform {
 
 }
 
+
 locals {
   name            = var.instance == "default" ? "rabbitmq" : "rabbitmq-${var.instance}"
   enabled_plugins = distinct(compact(concat(["rabbitmq_peer_discovery_k8s"], var.additional_plugins)))
